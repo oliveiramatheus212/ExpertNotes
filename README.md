@@ -4,6 +4,11 @@ Este é um projeto para registrar notas, permitindo a entrada de texto escrito o
 
 O projeto está rodando aqui para testar: https://expertynote.netlify.app/
 
+![experty1](https://github.com/oliveiramatheus212/ExpertNotes/assets/61399334/0fd5779c-9155-4fa9-930e-e9daf335e3c7)
+![experty2](https://github.com/oliveiramatheus212/ExpertNotes/assets/61399334/d246bf3b-a0d5-4d5a-b79e-4b8db332b891)
+![image](https://github.com/oliveiramatheus212/ExpertNotes/assets/61399334/60b73de0-50d0-4d3d-baaa-32d3e05ad345)
+
+
 ## Tecnologias Utilizadas
 
 - **ReactJS**: Biblioteca JavaScript para a construção de interfaces de usuário.
