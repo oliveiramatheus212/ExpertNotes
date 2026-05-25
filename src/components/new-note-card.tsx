@@ -103,9 +103,9 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
             <X className="size-6 md:size-5" />
           </Dialog.Close>
 
-          <form className="flex-1 flex flex-col overflow-y-auto">
-            <div className="flex flex-1 flex-col gap-3 p-5">
-              <span className="text-base font-medium text-slate-300">
+          <form className="flex-1 flex flex-col min-h-0">
+            <div className="flex flex-1 flex-col gap-3 p-5 overflow-y-auto min-h-0">
+              <span className="text-base font-medium text-slate-300 shrink-0">
                 Adicionar nota
               </span>
 
@@ -131,7 +131,7 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
               ) : (
                 <textarea
                   autoFocus
-                  className="text-base leading-7 text-slate-400 bg-transparent resize-none flex-1 outline-none"
+                  className="text-base leading-7 text-slate-400 bg-transparent resize-none flex-1 min-h-[120px] outline-none"
                   onChange={handleContentChanged}
                   value={content}
                 ></textarea>
@@ -142,7 +142,7 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
               <button
                 type="button"
                 onClick={handleStopRecording}
-                className="w-full flex items-center justify-center gap-2 bg-slate-900 pt-4 text-center text-base text-slate-300 outline-none font-medium hover:text-slate-100"
+                className="w-full shrink-0 flex items-center justify-center gap-2 bg-slate-900 pt-4 text-center text-base text-slate-300 outline-none font-medium hover:text-slate-100"
                 style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}
               >
                 <div className="size-3 rounded-full bg-red-500 animate-pulse"/>
@@ -152,7 +152,7 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
               <button
                 type="button"
                 onClick={handleSaveNote}
-                className="w-full bg-lime-400 pt-4 text-center text-base text-lime-950 outline-none font-medium hover:bg-lime-500"
+                className="w-full shrink-0 bg-lime-400 pt-4 text-center text-base text-lime-950 outline-none font-medium hover:bg-lime-500"
                 style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}
               >
                 Salvar nota
