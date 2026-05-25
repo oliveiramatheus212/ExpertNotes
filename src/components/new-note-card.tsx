@@ -98,24 +98,24 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
 
       <Dialog.Portal>
         <Dialog.Overlay className="inset-0 fixed bg-black/50" />
-        <Dialog.Content className="fixed overflow-hidden inset-0 md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] w-full md:h-[60vh] bg-slate-700 md:rounded-md flex flex-col outline-none">
-          <Dialog.Close className="absolute right-0 top-0 bg-slate-800 p-1.5 text-slate-400 hover:text-slate-100">
-            <X className="size-5" />
+        <Dialog.Content className="fixed overflow-hidden top-0 left-0 right-0 h-dvh md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-[640px] w-full md:h-[60vh] bg-slate-700 md:rounded-md flex flex-col outline-none">
+          <Dialog.Close className="absolute right-0 top-0 bg-slate-800 p-3 md:p-1.5 text-slate-400 hover:text-slate-100">
+            <X className="size-6 md:size-5" />
           </Dialog.Close>
 
           <form className="flex-1 flex flex-col overflow-y-auto">
             <div className="flex flex-1 flex-col gap-3 p-5">
-              <span className="text-sm font-medium text-slate-300">
+              <span className="text-base font-medium text-slate-300">
                 Adicionar nota
               </span>
 
               {shouldShowOnboarding ? (
-                <p className="text-sm leading-6 text-slate-400">
+                <p className="text-base leading-7 text-slate-400">
                   Comece{" "}
                   <button
                     type="button"
                     onClick={handleStartRecording}
-                    className="font-medium text-lime-400 hover:underline"
+                    className="font-medium text-lime-400 hover:underline py-1"
                   >
                     gravando uma nota
                   </button>{" "}
@@ -123,7 +123,7 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
                   <button
                     type="button"
                     onClick={handleStartEditor}
-                    className="font-medium text-lime-400 hover:underline"
+                    className="font-medium text-lime-400 hover:underline py-1"
                   >
                     utilize apenas texto
                   </button>
@@ -131,7 +131,7 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
               ) : (
                 <textarea
                   autoFocus
-                  className="text-sm leading-6 text-slate-400 bg-transparent resize-none flex-1 outline-none"
+                  className="text-base leading-7 text-slate-400 bg-transparent resize-none flex-1 outline-none"
                   onChange={handleContentChanged}
                   value={content}
                 ></textarea>
@@ -142,7 +142,8 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
               <button
                 type="button"
                 onClick={handleStopRecording}
-                className="w-full flex items-center justify-center gap-2 bg-slate-900 py-4 text-center text-sm text-slate-300 outline-none font-medium hover:text-slate-100"
+                className="w-full flex items-center justify-center gap-2 bg-slate-900 pt-4 text-center text-base text-slate-300 outline-none font-medium hover:text-slate-100"
+                style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}
               >
                 <div className="size-3 rounded-full bg-red-500 animate-pulse"/>
                 Gravando! (clique p/ interromper)
@@ -151,7 +152,8 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
               <button
                 type="button"
                 onClick={handleSaveNote}
-                className="w-full bg-lime-400 py-4 text-center text-sm text-lime-950 outline-none font-medium hover:bg-lime-500"
+                className="w-full bg-lime-400 pt-4 text-center text-base text-lime-950 outline-none font-medium hover:bg-lime-500"
+                style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}
               >
                 Salvar nota
               </button>
